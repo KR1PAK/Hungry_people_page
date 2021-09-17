@@ -1,0 +1,126 @@
+.seventh{
+  .container{
+    width: 100%;
+    background-image: url("../img/seventh_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0 50px 0;
+    .sev_txt{
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 12px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.5);
+      border-radius: 5px;
+
+      transform: translate(0px , 100%);
+      opacity: 0;
+      transition:all 0.8s ease 0s;
+
+      &._active{
+        transform: translate(0px , 0px);
+        opacity: 1;
+      }
+    }
+    .private_events{
+      color: #FFFFFF;
+      text-align: center;
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 14px;
+      padding: 20px 0 20px 0;
+
+      transform: translate(0px , 100%);
+      opacity: 0;
+      transition:all 0.8s ease 0s;
+
+      &._active{
+        transform: translate(0px , 0px);
+        opacity: 1;
+      }
+    }
+    &__body{
+      max-width: 1280px;
+      display: flex;
+      gap: 70px;
+      justify-content: space-between;
+
+
+      @media (max-width: 1060px) {
+        max-width: 960px;
+        gap: 0;
+      }
+      @media (max-width: 998px) {
+        flex-direction: column;
+        max-width: 860px;
+      }
+      @media (max-width: 890px) {
+        flex-direction: column;
+        max-width: 760px;
+      }
+      @media (max-width: 770px) {
+        flex-direction: column;
+        max-width: 660px;
+      }
+      @media (max-width: 670px) {
+        flex-direction: column;
+        max-width: 560px;
+      }
+      @media (max-width: 590px) {
+        flex-direction: column;
+        max-width: 460px;
+      }
+      @media (max-width: 470px) {
+        flex-direction: column;
+        max-width: 360px;
+      }
+      .col{
+        width: 100%;
+
+        &:first-child{
+          transform: translate(-100px , 0px);
+          opacity: 0;
+          transition:all 0.8s ease 0s;
+
+          &._active{
+            transform: translate(0px , 0px);
+            opacity: 1;
+          }
+        }
+        &:last-child{
+          transform: translate(100px , 0px);
+          opacity: 0;
+          transition:all 0.8s ease 0s;
+
+          &._active{
+            transform: translate(0px , 0px);
+            opacity: 1;
+          }
+        }
+        img{
+          width: 100%;
+          max-width: 600px;
+          @media (max-width: 650px) {
+            max-width: 400px;
+          }
+          @media (max-width: 650px) {
+            max-width: 400px;
+          }
+          @media (max-width: 440px) {
+            max-width: 350px;
+          }
+        }
+      }
+    }
+  }
+}
